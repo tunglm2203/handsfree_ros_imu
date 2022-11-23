@@ -55,7 +55,7 @@ def hex_to_ieee(len, buff):
 if __name__ == "__main__":
     rospy.init_node("imu")
 
-    port = rospy.get_param("~port", "/dev/ttyUSB0")
+    port = rospy.get_param("~port", "/dev/ttyUSB2")
     baudrate = rospy.get_param("~baudrate", 921600)
 
     try:
@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
     except Exception, e:
         print e
-        rospy.loginfo("找不到 ttyUSB0,请检查 ium 是否和电脑连接")
+        rospy.loginfo("找不到 ttyUSB2,请检查 ium 是否和电脑连接")
         exit()
 
     else:
